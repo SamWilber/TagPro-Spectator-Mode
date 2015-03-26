@@ -23,7 +23,7 @@ $(document).ready(function(){
     }
     })
     if (GM_getValue("specMode") === true) {
-        if(document.URL.search('games/find?r=')>=0) {
+        if(document.URL.search('games/find')>=0) {
         window.location.href = "/";
         }
     }
