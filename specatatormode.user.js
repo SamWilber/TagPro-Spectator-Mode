@@ -13,7 +13,7 @@
 $(document).ready(function(){
     if(document.URL.endsWith(".com/") === true) {
         $('article div.section.smaller:eq(0)').append("<input type='checkbox' id='tglSpec'>Spectator Mode</input>");
-    };
+    }
     if (GM_getValue("specMode") === true) {
         $("#tglSpec").prop('checked', true);
     }
@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
     });
     if (GM_getValue("specMode") === true) {
-        if(document.URL.search('games/find')>=0) {
+        if(document.URL.search('games/find') >= 0) {
         window.location.href = "/";
         }
     }
