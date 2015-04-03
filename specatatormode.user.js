@@ -11,8 +11,9 @@
 // ==/UserScript==
 
 $(document).ready(function(){
-    if(document.URL.endsWith(".com/") === true) {
+    if(document.URL.endsWith(".com/") === true || document.URL.endsWith("/?spectator=true") === true ) {
         $('article div.section.smaller:eq(0)').append("<input type='checkbox' id='tglSpec'>Spectator Mode</input>");
+        $('#optionsName').append("<input type='checkbox' id='tglSpec'>Spectator Mode</input>");
     }
     if (GM_getValue("specMode") === true) {
         $("#tglSpec").prop('checked', true);
